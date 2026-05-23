@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.8" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="RavenDB.Client" Version="7.2.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ModelDtos\QuestDto\Input\" />
+    <Folder Include="ModelDtos\QuestDto\Output\" />
+    <Folder Include="ModelDtos\QuestCompletionDto\Input\" />
+    <Folder Include="ModelDtos\QuestCompletionDto\Output\" />
+    <Folder Include="ModelDtos\GuildDto\Input\" />
+    <Folder Include="ModelDtos\GuildDto\Output\" />
+  </ItemGroup>
+
+</Project>

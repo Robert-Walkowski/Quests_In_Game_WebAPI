@@ -1,0 +1,50 @@
+[
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.CharactersController",
+    "Method": "CreateCharacterAsync",
+    "RelativePath": "api/Characters/createCharacter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "QuestsInGame_WebAPI_Project.ModelDtos.CharacterDto.Input.CreateCharacterInputDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.CharactersController",
+    "Method": "DeleteCharacterAsync",
+    "RelativePath": "api/Characters/deleteCharacter/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.CharactersController",
+    "Method": "ReadCharacterAsync",
+    "RelativePath": "api/Characters/readCharacter/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

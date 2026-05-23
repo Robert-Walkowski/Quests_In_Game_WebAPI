@@ -1,0 +1,6 @@
+@QuestsInGame_WebAPI_Project_HostAddress = http://localhost:5041
+
+GET {{QuestsInGame_WebAPI_Project_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
