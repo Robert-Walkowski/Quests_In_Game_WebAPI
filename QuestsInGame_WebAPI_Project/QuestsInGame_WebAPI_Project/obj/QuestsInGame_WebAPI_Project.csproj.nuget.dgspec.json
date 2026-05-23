@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Studia III rok\\Semestr II\\Dokumentowe bazy danych (kurs komp.)\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj": {}
+    "D:\\Studia III rok\\Semestr II\\Dokumentowe bazy danych (kurs komp.)\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj": {}
   },
   "projects": {
-    "D:\\Studia III rok\\Semestr II\\Dokumentowe bazy danych (kurs komp.)\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj": {
+    "D:\\Studia III rok\\Semestr II\\Dokumentowe bazy danych (kurs komp.)\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Studia III rok\\Semestr II\\Dokumentowe bazy danych (kurs komp.)\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj",
+        "projectUniqueName": "D:\\Studia III rok\\Semestr II\\Dokumentowe bazy danych (kurs komp.)\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj",
         "projectName": "QuestsInGame_WebAPI_Project",
-        "projectPath": "D:\\Studia III rok\\Semestr II\\Dokumentowe bazy danych (kurs komp.)\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj",
+        "projectPath": "D:\\Studia III rok\\Semestr II\\Dokumentowe bazy danych (kurs komp.)\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj",
         "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
-        "outputPath": "D:\\Studia III rok\\Semestr II\\Dokumentowe bazy danych (kurs komp.)\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\obj\\",
+        "outputPath": "D:\\Studia III rok\\Semestr II\\Dokumentowe bazy danych (kurs komp.)\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

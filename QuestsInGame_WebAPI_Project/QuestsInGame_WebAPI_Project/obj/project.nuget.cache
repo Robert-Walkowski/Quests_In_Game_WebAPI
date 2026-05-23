@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rrLVNmfvD5s=",
+  "dgSpecHash": "z7jZ3w1UfsE=",
   "success": true,
-  "projectFilePath": "D:\\Studia III rok\\Semestr II\\Dokumentowe bazy danych (kurs komp.)\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj",
+  "projectFilePath": "D:\\Studia III rok\\Semestr II\\Dokumentowe bazy danych (kurs komp.)\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rober\\.nuget\\packages\\lambda2js.signed\\3.1.4\\lambda2js.signed.3.1.4.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\10.0.6\\microsoft.aspnetcore.jsonpatch.10.0.6.nupkg.sha512",
