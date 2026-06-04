@@ -877,11 +877,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Studia III rok\\Semestr II\\Dokumentowe bazy danych (kurs komp.)\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj",
+      "projectUniqueName": "D:\\Private projects (for CV)\\repos\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj",
       "projectName": "QuestsInGame_WebAPI_Project",
-      "projectPath": "D:\\Studia III rok\\Semestr II\\Dokumentowe bazy danych (kurs komp.)\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj",
+      "projectPath": "D:\\Private projects (for CV)\\repos\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj",
       "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
-      "outputPath": "D:\\Studia III rok\\Semestr II\\Dokumentowe bazy danych (kurs komp.)\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\obj\\",
+      "outputPath": "D:\\Private projects (for CV)\\repos\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1374,5 +1374,13 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.CharactersController",
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.CharacterController",
     "Method": "CreateCharacterAsync",
-    "RelativePath": "api/Characters/createCharacter",
+    "RelativePath": "api/Character/createCharacter",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -16,9 +16,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.CharactersController",
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.CharacterController",
     "Method": "DeleteCharacterAsync",
-    "RelativePath": "api/Characters/deleteCharacter/{id}",
+    "RelativePath": "api/Character/deleteCharacter/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -32,9 +32,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.CharactersController",
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.CharacterController",
     "Method": "ReadCharacterAsync",
-    "RelativePath": "api/Characters/readCharacter/{id}",
+    "RelativePath": "api/Character/readCharacter/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -42,6 +42,234 @@
       {
         "Name": "id",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.CharacterController",
+    "Method": "UpdateCharacterAsync",
+    "RelativePath": "api/Character/updateCharacter/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "QuestsInGame_WebAPI_Project.ModelDtos.CharacterDto.Input.UpdateCharacterInputDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.GuildController",
+    "Method": "DeleteGuildAsync",
+    "RelativePath": "api/Guild/deleteGuild/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.GuildController",
+    "Method": "CreateGuildAsync",
+    "RelativePath": "api/Guild/guildCreate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "QuestsInGame_WebAPI_Project.ModelDtos.GuildDto.Input.CreateGuildInputDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.GuildController",
+    "Method": "ReadGuildInformationAsync",
+    "RelativePath": "api/Guild/readGuild/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.GuildController",
+    "Method": "UpdateGuildInformationAsyn",
+    "RelativePath": "api/Guild/updateGuild/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "QuestsInGame_WebAPI_Project.ModelDtos.GuildDto.Input.UpdateGuildInputDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.QuestController",
+    "Method": "CreateQuestAsync",
+    "RelativePath": "api/Quest/createQuest",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "QuestsInGame_WebAPI_Project.ModelDtos.QuestDto.Input.CreateQuestInputDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.QuestController",
+    "Method": "DeleteQuestAsync",
+    "RelativePath": "api/Quest/deleteQuest/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.QuestController",
+    "Method": "ReadQuestAsync",
+    "RelativePath": "api/Quest/readQuest/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.QuestController",
+    "Method": "UpdateQuestInformationAsync",
+    "RelativePath": "api/Quest/updateQuest/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "QuestsInGame_WebAPI_Project.ModelDtos.QuestDto.Input.UpdateQuestInputDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.QuestCompletionController",
+    "Method": "CreateQuestCompletionAsync",
+    "RelativePath": "api/QuestCompletion/createQuestCompletion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "QuestsInGame_WebAPI_Project.ModelDtos.QuestCompletionDto.Input.CreateQuestCompletionInputDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.QuestCompletionController",
+    "Method": "DeleteQuestCompletionAsync",
+    "RelativePath": "api/QuestCompletion/deleteQuestCompletion/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.QuestCompletionController",
+    "Method": "ReadQuestCompletionAsync",
+    "RelativePath": "api/QuestCompletion/readQuestCompletion/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.QuestCompletionController",
+    "Method": "UpdateQuestCompletionAsync",
+    "RelativePath": "api/QuestCompletion/updateQuestCompletion/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "QuestsInGame_WebAPI_Project.ModelDtos.QuestCompletionDto.Input.UpdateQuestCompletionInputDto",
         "IsRequired": true
       }
     ],

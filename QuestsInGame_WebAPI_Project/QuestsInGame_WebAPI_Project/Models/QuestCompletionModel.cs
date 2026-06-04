@@ -4,7 +4,8 @@
     {
         public string Id { get; set; }
         public string CharacterId { get; set; }
-        public TimeSpan DurationTime { get; set; }
-        public double Grade { get; set; }
+        public string QuestId { get; set; }
+        public TimeSpan? CompletionTime { get; set; }
+        public double? Grade { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace QuestsInGame_WebAPI_Project.Database
             {
                 var store = new DocumentStore
                 {
-                    Urls = new[] { "http://localhost:8080" },
+                    Urls = new[] { "http://localhost:8888" },
                     Database = "GameQuests"
                 };
 

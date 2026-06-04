@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using QuestsInGame_WebAPI_Project.Enums;
+using QuestsInGame_WebAPI_Project.Interfaces;
 using QuestsInGame_WebAPI_Project.ModelDtos.CharacterDto.Input;
 using QuestsInGame_WebAPI_Project.ModelDtos.CharacterDto.Output;
 using QuestsInGame_WebAPI_Project.Models;
@@ -9,16 +10,14 @@ namespace QuestsInGame_WebAPI_Project.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class CharactersController : ControllerBase
+    public class CharacterController : ControllerBase
     {
-        private readonly CharactersService _charactersService;
+        private readonly ICharactersService _charactersService;
 
-        public CharactersController(CharactersService charactersService)
+        public CharacterController(ICharactersService charactersService)
         {
             this._charactersService = charactersService;
         }
-
-        //TODO: Make Whole Logic for this controller
 
         [HttpPost("createCharacter")]
         public async Task<IActionResult> CreateCharacterAsync([FromBody] CreateCharacterInputDto request)
@@ -39,18 +38,36 @@ namespace QuestsInGame_WebAPI_Project.Controllers
         [HttpGet("readCharacter/{id}")]
         public async Task<IActionResult> ReadCharacterAsync(string id)
         {
-            (CharacterModel? character, CharacterStatus status) = await _charactersService.ReadCharacterAsync(id);
+            (CharacterModel? loadedCharacter, CharacterStatus status) = await _charactersService.ReadCharacterAsync(id);
 
             ReadCharacterOutputDto response = new ReadCharacterOutputDto
             {
                 Status = status,
                 Message = status.ToMessage(),
-                Character = character
+                Character = loadedCharacter
             };
 
             if (status == CharacterStatus.SUCCESS)
                 return Ok(response);
             return BadRequest(response);
+        }
+
+        [HttpPut("updateCharacter/{id}")]
+        public async Task<IActionResult> UpdateCharacterAsync(string id, [FromBody] UpdateCharacterInputDto request)
+        {
+            (CharacterModel? updatedCharacter, CharacterStatus status) = await _charactersService.UpdateCharacterAsync(id, request);
+
+            UpdateCharacterOutputDto response = new UpdateCharacterOutputDto
+            {
+                Status = status,
+                Message = status.ToMessage(),
+                Character = updatedCharacter
+            };
+
+            if (status == CharacterStatus.SUCCESS)
+                return Ok(response);
+            return BadRequest(response);
+
         }
 
         [HttpDelete("deleteCharacter/{id}")]

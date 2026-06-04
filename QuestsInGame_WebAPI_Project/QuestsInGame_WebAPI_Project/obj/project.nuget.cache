@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z7jZ3w1UfsE=",
+  "dgSpecHash": "rN7rESU2nMM=",
   "success": true,
-  "projectFilePath": "D:\\Studia III rok\\Semestr II\\Dokumentowe bazy danych (kurs komp.)\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj",
+  "projectFilePath": "D:\\Private projects (for CV)\\repos\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rober\\.nuget\\packages\\lambda2js.signed\\3.1.4\\lambda2js.signed.3.1.4.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\10.0.6\\microsoft.aspnetcore.jsonpatch.10.0.6.nupkg.sha512",
@@ -21,5 +21,15 @@
     "C:\\Users\\rober\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\10.1.7\\swashbuckle.aspnetcore.swaggergen.10.1.7.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\10.1.7\\swashbuckle.aspnetcore.swaggerui.10.1.7.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "projectPath": "D:\\Private projects (for CV)\\repos\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\Private projects (for CV)\\repos\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

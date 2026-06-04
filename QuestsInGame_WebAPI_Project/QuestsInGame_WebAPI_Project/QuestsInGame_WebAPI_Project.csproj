@@ -13,13 +13,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.7" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ModelDtos\QuestDto\Input\" />
-    <Folder Include="ModelDtos\QuestDto\Output\" />
-    <Folder Include="ModelDtos\QuestCompletionDto\Input\" />
-    <Folder Include="ModelDtos\QuestCompletionDto\Output\" />
-    <Folder Include="ModelDtos\GuildDto\Input\" />
-    <Folder Include="ModelDtos\GuildDto\Output\" />
-  </ItemGroup>
-
 </Project>

@@ -7,6 +7,8 @@
         EMPTY_GAMECLASS = 2,
         LEVEL_BELOW_MINIMUM = 3,
         CHARACTER_NOT_FOUND = 4,
+        INCORRECT_GAMECLASS = 5,
+        GUILD_NOT_EXISTS = 6,
         RAVEN_ERROR = 99
     }
 
@@ -26,10 +28,14 @@
                     return "Poziom postaci jest poniżej zera lub pusty.";
                 case CharacterStatus.CHARACTER_NOT_FOUND:
                     return "Postać o tym 'id' nie istnieje.";
+                case CharacterStatus.INCORRECT_GAMECLASS:
+                    return "Podano nazwę klasy, która nie jest dostępna w tej grze.";
+                case CharacterStatus.GUILD_NOT_EXISTS:
+                    return "Podany id gildii jest niepoprawny (nie istnieje gildia o takim id).";
                 case CharacterStatus.RAVEN_ERROR:
                     return "Wystąpił problem związany z ravenem.";
                 default:
-                    return "Niezarejestrowany błąd związany z charakterem.";
+                    return "Niezarejestrowany błąd związany z postacią.";
             }
         }
     }

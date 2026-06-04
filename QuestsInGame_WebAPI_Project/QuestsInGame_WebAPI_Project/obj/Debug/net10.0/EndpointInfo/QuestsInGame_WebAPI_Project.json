@@ -1,14 +1,14 @@
 {
   "openapi": "3.0.4",
   "info": {
-    "title": "QuestsInGame_WebAPI_Project",
-    "version": "1.0"
+    "title": "Quest in Games API",
+    "version": "v1"
   },
   "paths": {
-    "/api/Characters/createCharacter": {
+    "/api/Character/createCharacter": {
       "post": {
         "tags": [
-          "Characters"
+          "Character"
         ],
         "requestBody": {
           "content": {
@@ -36,10 +36,10 @@
         }
       }
     },
-    "/api/Characters/readCharacter/{id}": {
+    "/api/Character/readCharacter/{id}": {
       "get": {
         "tags": [
-          "Characters"
+          "Character"
         ],
         "parameters": [
           {
@@ -58,10 +58,399 @@
         }
       }
     },
-    "/api/Characters/deleteCharacter/{id}": {
+    "/api/Character/updateCharacter/{id}": {
+      "put": {
+        "tags": [
+          "Character"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCharacterInputDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCharacterInputDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCharacterInputDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Character/deleteCharacter/{id}": {
       "delete": {
         "tags": [
-          "Characters"
+          "Character"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Guild/guildCreate": {
+      "post": {
+        "tags": [
+          "Guild"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateGuildInputDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateGuildInputDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateGuildInputDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Guild/readGuild/{id}": {
+      "get": {
+        "tags": [
+          "Guild"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Guild/updateGuild/{id}": {
+      "put": {
+        "tags": [
+          "Guild"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGuildInputDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGuildInputDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGuildInputDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Guild/deleteGuild/{id}": {
+      "delete": {
+        "tags": [
+          "Guild"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Quest/createQuest": {
+      "post": {
+        "tags": [
+          "Quest"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateQuestInputDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateQuestInputDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateQuestInputDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Quest/readQuest/{id}": {
+      "get": {
+        "tags": [
+          "Quest"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Quest/updateQuest/{id}": {
+      "put": {
+        "tags": [
+          "Quest"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateQuestInputDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateQuestInputDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateQuestInputDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Quest/deleteQuest/{id}": {
+      "delete": {
+        "tags": [
+          "Quest"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/QuestCompletion/createQuestCompletion": {
+      "post": {
+        "tags": [
+          "QuestCompletion"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateQuestCompletionInputDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateQuestCompletionInputDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateQuestCompletionInputDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/QuestCompletion/readQuestCompletion/{id}": {
+      "get": {
+        "tags": [
+          "QuestCompletion"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/QuestCompletion/updateQuestCompletion/{id}": {
+      "put": {
+        "tags": [
+          "QuestCompletion"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateQuestCompletionInputDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateQuestCompletionInputDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateQuestCompletionInputDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/QuestCompletion/deleteQuestCompletion/{id}": {
+      "delete": {
+        "tags": [
+          "QuestCompletion"
         ],
         "parameters": [
           {
@@ -96,11 +485,187 @@
           },
           "level": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "characterGuildId": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateGuildInputDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "membersId": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateQuestCompletionInputDto": {
+        "type": "object",
+        "properties": {
+          "characterId": {
+            "type": "string",
+            "nullable": true
+          },
+          "questId": {
+            "type": "string",
+            "nullable": true
+          },
+          "completionTime": {
+            "type": "string",
+            "format": "date-span",
+            "nullable": true
+          },
+          "grade": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateQuestInputDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "questLevel": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "reward": {
+            "$ref": "#/components/schemas/QuestReward"
+          },
+          "status": {
+            "$ref": "#/components/schemas/QuestCompletionStatus"
+          }
+        },
+        "additionalProperties": false
+      },
+      "QuestCompletionStatus": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "QuestReward": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "UpdateCharacterInputDto": {
+        "type": "object",
+        "properties": {
+          "newName": {
+            "type": "string",
+            "nullable": true
+          },
+          "newGameClass": {
+            "type": "string",
+            "nullable": true
+          },
+          "newLevel": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "newCharacterGuildId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateGuildInputDto": {
+        "type": "object",
+        "properties": {
+          "newGuildName": {
+            "type": "string",
+            "nullable": true
+          },
+          "newDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "newMembersId": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateQuestCompletionInputDto": {
+        "type": "object",
+        "properties": {
+          "newCompletionTime": {
+            "type": "string",
+            "format": "date-span",
+            "nullable": true
+          },
+          "newGrade": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateQuestInputDto": {
+        "type": "object",
+        "properties": {
+          "newQuestTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "newDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "newQuestLevel": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "newQuestReward": {
+            "$ref": "#/components/schemas/QuestReward"
+          },
+          "newStatus": {
+            "$ref": "#/components/schemas/QuestCompletionStatus"
           }
         },
         "additionalProperties": false
@@ -109,7 +674,16 @@
   },
   "tags": [
     {
-      "name": "Characters"
+      "name": "Character"
+    },
+    {
+      "name": "Guild"
+    },
+    {
+      "name": "Quest"
+    },
+    {
+      "name": "QuestCompletion"
     }
   ]
 }
