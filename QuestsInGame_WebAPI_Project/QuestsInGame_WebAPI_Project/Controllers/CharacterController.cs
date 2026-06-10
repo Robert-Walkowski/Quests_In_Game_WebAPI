@@ -3,8 +3,10 @@ using QuestsInGame_WebAPI_Project.Enums;
 using QuestsInGame_WebAPI_Project.Interfaces;
 using QuestsInGame_WebAPI_Project.ModelDtos.CharacterDto.Input;
 using QuestsInGame_WebAPI_Project.ModelDtos.CharacterDto.Output;
+using QuestsInGame_WebAPI_Project.ModelDtos.QuestCompletionDto.Output;
 using QuestsInGame_WebAPI_Project.Models;
 using QuestsInGame_WebAPI_Project.Services;
+using QuestsInGame_WebAPI_Project.StaticIndexes;
 
 namespace QuestsInGame_WebAPI_Project.Controllers
 {
@@ -45,6 +47,91 @@ namespace QuestsInGame_WebAPI_Project.Controllers
                 Status = status,
                 Message = status.ToMessage(),
                 Character = loadedCharacter
+            };
+
+            if (status == CharacterStatus.SUCCESS)
+                return Ok(response);
+            return BadRequest(response);
+        }
+
+        [HttpGet("autoIndexCharactersWithLevel10OrMoreAndWarriorClass")]
+        public async Task<IActionResult> CharactersWithLevel10OrMoreAndWarriorClassAsync()
+        {
+            (List<CharacterModel> result, CharacterStatus status) = await _charactersService.AutoIndexCharactersWithLevel10OrMoreAndWarriorClassAsync();
+
+            WarriorClassAndLevel10OrMoreOutputDto response = new WarriorClassAndLevel10OrMoreOutputDto
+            {
+                Status = status,
+                Message = status.ToMessage(),
+                ResultList = result
+            };
+
+            if (status == CharacterStatus.SUCCESS)
+                return Ok(response);
+            return BadRequest(response);
+        }
+
+        [HttpGet("autoIndexCharactersWithGuildOnly")]
+        public async Task<IActionResult> CharactersWithGuildOnlyAsync()
+        {
+            (List<CharacterModel> result, CharacterStatus status) = await _charactersService.AutoIndexCharactersWithGuildOnlyAsync();
+
+            CharacterWithGuildOnlyOutputDto response = new CharacterWithGuildOnlyOutputDto
+            {
+                Status = status,
+                Message = status.ToMessage(),
+                ResultList = result
+            };
+
+            if (status == CharacterStatus.SUCCESS)
+                return Ok(response);
+            return BadRequest(response);
+        }
+
+        [HttpGet("staticIndexCharactersWithGuildName")]
+        public async Task<IActionResult> CharactersWithGuildNameAsync()
+        {
+            (List<Characters_WithGuildName.Result> result, CharacterStatus status) = await _charactersService.StaticIndexCharactersWithGuildNameWithGuildAsync();
+
+            StaticIndexCharacterWithGuildNameOutputDto response = new StaticIndexCharacterWithGuildNameOutputDto
+            {
+                Status = status,
+                Message = status.ToMessage(),
+                ResultList = result
+            };
+
+            if (status == CharacterStatus.SUCCESS)
+                return Ok(response);
+            return BadRequest(response);
+        }
+
+        [HttpGet("staticIndexCharacterByExpirienceScoreWithGoldTierAndClassWarrior")]
+        public async Task<IActionResult> CharacterByExpirienceScoreWithGoldTierAndClassWarriorAsync()
+        {
+            (List<Characters_ByExpirienceScore.Result> result, CharacterStatus status) = await _charactersService.StaticIndexCharacterByExpirienceScoreWithGoldTierAndClassWarriorAsync();
+
+            StaticIndexCharacterByExpirienceScoreOutputDto response = new StaticIndexCharacterByExpirienceScoreOutputDto
+            {
+                Status = status,
+                Message = status.ToMessage(),
+                ResultList = result
+            };
+
+            if (status == CharacterStatus.SUCCESS)
+                return Ok(response);
+            return BadRequest(response);
+        }
+
+        [HttpGet("skipFourFirstCharactersAndTakeTwo")]
+        public async Task<IActionResult> SkipFourFirstCharactersAndTakeTwoAsync()
+        {
+            (List<CharacterModel> result, CharacterStatus status) = await _charactersService.SkipFourFirstCharactersAndTakeTwoAsync();
+
+            TakeFiveLastModifiedCharactersOutputDto response = new TakeFiveLastModifiedCharactersOutputDto
+            {
+                Status = status,
+                Message = status.ToMessage(),
+                ResultList = result
             };
 
             if (status == CharacterStatus.SUCCESS)

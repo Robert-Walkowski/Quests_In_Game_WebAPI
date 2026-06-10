@@ -4,7 +4,7 @@
     {
         public string? NewName { get; set; }
         public string? NewGameClass { get; set; }
-        public int? NewLevel { get; set; }
+        public int NewLevel { get; set; }
         public string? NewCharacterGuildId { get; set; }
     }
 }

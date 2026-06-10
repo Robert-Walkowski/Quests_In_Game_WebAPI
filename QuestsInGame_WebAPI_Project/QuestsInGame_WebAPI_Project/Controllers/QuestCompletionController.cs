@@ -5,6 +5,8 @@ using QuestsInGame_WebAPI_Project.Interfaces;
 using QuestsInGame_WebAPI_Project.ModelDtos.QuestCompletionDto.Input;
 using QuestsInGame_WebAPI_Project.ModelDtos.QuestCompletionDto.Output;
 using QuestsInGame_WebAPI_Project.Models;
+using QuestsInGame_WebAPI_Project.Services;
+using QuestsInGame_WebAPI_Project.StaticIndexes;
 
 namespace QuestsInGame_WebAPI_Project.Controllers
 {
@@ -45,6 +47,23 @@ namespace QuestsInGame_WebAPI_Project.Controllers
                 Status = status,
                 Message = status.ToMessage(),
                 QuestCompletion = questCompletion
+            };
+
+            if (status == QuestCompletionStatusEnum.SUCCESS)
+                return Ok(response);
+            return BadRequest(response);
+        }
+
+        [HttpGet("IWMRCharactersWithCountOfCompletedQuests")]
+        public async Task<IActionResult> IWMRCharactersWithCountOfCompletedQuestsAsync()
+        {
+            (List<QuestCompletions_ByCharacter.Result> resultList, QuestCompletionStatusEnum status) = await _questCompletionService.IWMRCharactersWithCountOfCompletedQuestsAsync();
+
+            IndexWMRCharactresWithCountOfCompletedQuestsOutputDto response = new IndexWMRCharactresWithCountOfCompletedQuestsOutputDto
+            {
+                Status = status,
+                Message = status.ToMessage(),
+                ResultList = resultList
             };
 
             if (status == QuestCompletionStatusEnum.SUCCESS)

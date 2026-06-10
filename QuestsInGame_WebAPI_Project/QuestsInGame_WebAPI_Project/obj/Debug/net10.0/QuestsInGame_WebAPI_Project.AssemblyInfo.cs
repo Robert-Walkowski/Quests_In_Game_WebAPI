@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuestsInGame_WebAPI_Project")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+46ffa84af4129c194087269a15bb23bc2de1bfa5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a8662da2e2c999ff0d7b4c7cb8d18d42b8a0032")]
 [assembly: System.Reflection.AssemblyProductAttribute("QuestsInGame_WebAPI_Project")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuestsInGame_WebAPI_Project")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,6 +1,26 @@
 [
   {
     "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.CharacterController",
+    "Method": "CharactersWithGuildOnlyAsync",
+    "RelativePath": "api/Character/autoIndexCharactersWithGuildOnly",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.CharacterController",
+    "Method": "CharactersWithLevel10OrMoreAndWarriorClassAsync",
+    "RelativePath": "api/Character/autoIndexCharactersWithLevel10OrMoreAndWarriorClass",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.CharacterController",
     "Method": "CreateCharacterAsync",
     "RelativePath": "api/Character/createCharacter",
     "HttpMethod": "POST",
@@ -45,6 +65,36 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.CharacterController",
+    "Method": "SkipFourFirstCharactersAndTakeTwoAsync",
+    "RelativePath": "api/Character/skipFourFirstCharactersAndTakeTwo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.CharacterController",
+    "Method": "CharacterByExpirienceScoreWithGoldTierAndClassWarriorAsync",
+    "RelativePath": "api/Character/staticIndexCharacterByExpirienceScoreWithGoldTierAndClassWarrior",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.CharacterController",
+    "Method": "CharactersWithGuildNameAsync",
+    "RelativePath": "api/Character/staticIndexCharactersWithGuildName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -171,6 +221,43 @@
   },
   {
     "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.QuestController",
+    "Method": "FTSQuestByTitleOrDescriptionAsync",
+    "RelativePath": "api/Quest/FTSQuestByTitleOrDescription",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchingTerm",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.QuestController",
+    "Method": "PatchByQueryNewLevelQuestsAsync",
+    "RelativePath": "api/Quest/patchByQueryNewLevelQuests",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "qLevel",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "NewLevel",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.QuestController",
     "Method": "ReadQuestAsync",
     "RelativePath": "api/Quest/readQuest/{id}",
     "HttpMethod": "GET",
@@ -207,6 +294,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.QuestController",
+    "Method": "VectorSearchQuestsAsync",
+    "RelativePath": "api/Quest/VectorSearchQuests",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.QuestCompletionController",
     "Method": "CreateQuestCompletionAsync",
     "RelativePath": "api/QuestCompletion/createQuestCompletion",
@@ -236,6 +339,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestsInGame_WebAPI_Project.Controllers.QuestCompletionController",
+    "Method": "IWMRCharactersWithCountOfCompletedQuestsAsync",
+    "RelativePath": "api/QuestCompletion/IWMRCharactersWithCountOfCompletedQuests",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

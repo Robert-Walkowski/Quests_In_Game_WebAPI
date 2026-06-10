@@ -9,7 +9,7 @@ namespace QuestsInGame_WebAPI_Project.ModelDtos.CharacterDto.Input
     {
         public string? Name { get; set; }
         public string? GameClass { get; set; }
-        public int? Level { get; set; }
+        public int Level { get; set; }
         public string? CharacterGuildId { get; set; }
     }
 }

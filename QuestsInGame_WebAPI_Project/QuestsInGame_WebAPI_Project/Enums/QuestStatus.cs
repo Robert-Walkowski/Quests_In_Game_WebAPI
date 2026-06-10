@@ -6,6 +6,7 @@
         EMPTY_QUEST_TITLE = 1,
         INCORRECT_QUEST_LEVEL = 2,
         QUEST_NOT_FOUND = 3,
+        QUEST_LIST_IS_EMPTY = 4,
         RAVEN_ERROR = 99
     }
 
@@ -23,6 +24,8 @@
                     return "Poziom questa nie może być mniejszy bądź równy 0.";
                 case QuestStatus.QUEST_NOT_FOUND:
                     return "Nie znaleziono questa o zadanym id.";
+                case QuestStatus.QUEST_LIST_IS_EMPTY:
+                    return "Lista questów, które szukasz jest pusta (podczas użycia indeksu statycznego).";
                 case QuestStatus.RAVEN_ERROR:
                     return "Wystąpił problem związany z ravenem.";
                 default:

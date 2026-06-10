@@ -10,5 +10,8 @@ namespace QuestsInGame_WebAPI_Project.Interfaces
         Task<QuestStatus> DeleteQuestAsync(string questId);
         Task<(QuestModel?, QuestStatus)> ReadQuestInformationAsync(string questId);
         Task<(QuestModel?, QuestStatus)> UpdateQuestInformationAsync(string questId, UpdateQuestInputDto request);
+        Task<(List<QuestModel>, QuestStatus)> FTSQuestByTitleOrDescriptionAsync(string searchingTerm);
+        Task<(List<QuestModel>, QuestStatus)> VectorSearchQuestsAsync(string query);
+        Task<QuestStatus> PatchByQueryUpdateMoreQuestsAsync(int qLevel, int NewLevel);
     }
 }

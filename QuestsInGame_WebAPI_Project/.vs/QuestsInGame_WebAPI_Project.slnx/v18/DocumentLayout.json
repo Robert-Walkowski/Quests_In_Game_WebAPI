@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "D:\\Private projects (for CV)\\repos\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77B40957-E880-AC7B-18A8-57D4EA0B1176}|QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj|d:\\private projects (for cv)\\repos\\quests_in_game_webapi\\questsingame_webapi_project\\questsingame_webapi_project\\controllers\\questcompletioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77B40957-E880-AC7B-18A8-57D4EA0B1176}|QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj|solutionrelative:questsingame_webapi_project\\controllers\\questcompletioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77B40957-E880-AC7B-18A8-57D4EA0B1176}|QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj|d:\\private projects (for cv)\\repos\\quests_in_game_webapi\\questsingame_webapi_project\\questsingame_webapi_project\\services\\questcompletionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77B40957-E880-AC7B-18A8-57D4EA0B1176}|QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj|solutionrelative:questsingame_webapi_project\\services\\questcompletionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77B40957-E880-AC7B-18A8-57D4EA0B1176}|QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj|d:\\private projects (for cv)\\repos\\quests_in_game_webapi\\questsingame_webapi_project\\questsingame_webapi_project\\enums\\questcompletionstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77B40957-E880-AC7B-18A8-57D4EA0B1176}|QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj|solutionrelative:questsingame_webapi_project\\enums\\questcompletionstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77B40957-E880-AC7B-18A8-57D4EA0B1176}|QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj|d:\\private projects (for cv)\\repos\\quests_in_game_webapi\\questsingame_webapi_project\\questsingame_webapi_project\\models\\questcompletionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77B40957-E880-AC7B-18A8-57D4EA0B1176}|QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj|solutionrelative:questsingame_webapi_project\\models\\questcompletionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77B40957-E880-AC7B-18A8-57D4EA0B1176}|QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj|d:\\private projects (for cv)\\repos\\quests_in_game_webapi\\questsingame_webapi_project\\questsingame_webapi_project\\database\\documentstoreholder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77B40957-E880-AC7B-18A8-57D4EA0B1176}|QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project.csproj|solutionrelative:questsingame_webapi_project\\database\\documentstoreholder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,36 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 206,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "QuestCompletionStatusEnum.cs",
-              "DocumentMoniker": "D:\\Private projects (for CV)\\repos\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\Enums\\QuestCompletionStatusEnum.cs",
-              "RelativeDocumentMoniker": "QuestsInGame_WebAPI_Project\\Enums\\QuestCompletionStatusEnum.cs",
-              "ToolTip": "D:\\Private projects (for CV)\\repos\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\Enums\\QuestCompletionStatusEnum.cs",
-              "RelativeToolTip": "QuestsInGame_WebAPI_Project\\Enums\\QuestCompletionStatusEnum.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBgAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T18:20:14.154Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "QuestCompletionController.cs",
-              "DocumentMoniker": "D:\\Private projects (for CV)\\repos\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\Controllers\\QuestCompletionController.cs",
-              "RelativeDocumentMoniker": "QuestsInGame_WebAPI_Project\\Controllers\\QuestCompletionController.cs",
-              "ToolTip": "D:\\Private projects (for CV)\\repos\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\Controllers\\QuestCompletionController.cs",
-              "RelativeToolTip": "QuestsInGame_WebAPI_Project\\Controllers\\QuestCompletionController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T18:23:56.619Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
@@ -66,28 +26,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "QuestCompletionService.cs",
-              "DocumentMoniker": "D:\\Private projects (for CV)\\repos\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\Services\\QuestCompletionService.cs",
-              "RelativeDocumentMoniker": "QuestsInGame_WebAPI_Project\\Services\\QuestCompletionService.cs",
-              "ToolTip": "D:\\Private projects (for CV)\\repos\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\Services\\QuestCompletionService.cs",
-              "RelativeToolTip": "QuestsInGame_WebAPI_Project\\Services\\QuestCompletionService.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAkwGUAAABQAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "DocumentStoreHolder.cs",
+              "DocumentMoniker": "D:\\Private projects (for CV)\\repos\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\Database\\DocumentStoreHolder.cs",
+              "RelativeDocumentMoniker": "QuestsInGame_WebAPI_Project\\Database\\DocumentStoreHolder.cs",
+              "ToolTip": "D:\\Private projects (for CV)\\repos\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\Database\\DocumentStoreHolder.cs",
+              "RelativeToolTip": "QuestsInGame_WebAPI_Project\\Database\\DocumentStoreHolder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T20:17:11.718Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "QuestCompletionModel.cs",
-              "DocumentMoniker": "D:\\Private projects (for CV)\\repos\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\Models\\QuestCompletionModel.cs",
-              "RelativeDocumentMoniker": "QuestsInGame_WebAPI_Project\\Models\\QuestCompletionModel.cs",
-              "ToolTip": "D:\\Private projects (for CV)\\repos\\Quests_In_Game_WebAPI\\QuestsInGame_WebAPI_Project\\QuestsInGame_WebAPI_Project\\Models\\QuestCompletionModel.cs",
-              "RelativeToolTip": "QuestsInGame_WebAPI_Project\\Models\\QuestCompletionModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T20:14:04.971Z",
+              "WhenOpened": "2026-06-10T06:51:46.407Z",
               "EditorCaption": ""
             }
           ]

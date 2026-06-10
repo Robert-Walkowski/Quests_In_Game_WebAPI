@@ -3,8 +3,8 @@
     public class GuildModel
     {
         public string Id { get; set; }
-        public string Name { get; set; }
-        public string? Description { get; set; }
+        public string GuildName { get; set; }
+        public string? GuildDescription { get; set; }
         public List<string>? MembersId { get; set; }
     }
 }

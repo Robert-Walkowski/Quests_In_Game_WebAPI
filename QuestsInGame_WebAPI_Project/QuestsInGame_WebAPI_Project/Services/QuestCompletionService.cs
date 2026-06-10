@@ -4,6 +4,7 @@ using QuestsInGame_WebAPI_Project.Interfaces;
 using QuestsInGame_WebAPI_Project.ModelDtos.QuestCompletionDto.Input;
 using QuestsInGame_WebAPI_Project.ModelDtos.QuestDto.Input;
 using QuestsInGame_WebAPI_Project.Models;
+using QuestsInGame_WebAPI_Project.StaticIndexes;
 using Raven.Client.Documents;
 using Raven.Client.Exceptions;
 
@@ -34,6 +35,8 @@ namespace QuestsInGame_WebAPI_Project.Services
                         return QuestCompletionStatusEnum.QUEST_NOT_FOUND;
                     if (request.Grade < 1 || request.Grade > 10)
                         return QuestCompletionStatusEnum.QUEST_GRADE_TOO_HIGH;
+                    if (quest.Status == QuestCompletionStatus.COMPLETED)
+                        return QuestCompletionStatusEnum.QUEST_ALREADY_COMPLETED;
 
                     QuestCompletionModel questCompletion = new QuestCompletionModel
                     {
@@ -145,6 +148,32 @@ namespace QuestsInGame_WebAPI_Project.Services
             catch (RavenException)
             {
                 return QuestCompletionStatusEnum.RAVEN_ERROR;
+            }
+        }
+
+        #endregion
+
+        #region IndexesWithMapReduceMethods
+
+        public async Task<(List<QuestCompletions_ByCharacter.Result>, QuestCompletionStatusEnum)> IWMRCharactersWithCountOfCompletedQuestsAsync()
+        {
+            try
+            {
+                using (var session = DocumentStoreHolder.Store.OpenAsyncSession())
+                {
+                    List<QuestCompletions_ByCharacter.Result> result = await session.Query<QuestCompletions_ByCharacter.Result, QuestCompletions_ByCharacter>()
+                                                                                    .OrderByDescending(x => x.QuestCount)
+                                                                                    .ToListAsync();
+
+                    if (result.Count == 0)
+                        return (new List<QuestCompletions_ByCharacter.Result>(), QuestCompletionStatusEnum.CHARACTER_NOT_FOUND);
+
+                    return (result, QuestCompletionStatusEnum.SUCCESS);
+                }
+            }
+            catch (RavenException)
+            {
+                return (new List<QuestCompletions_ByCharacter.Result>(), QuestCompletionStatusEnum.RAVEN_ERROR);
             }
         }
 

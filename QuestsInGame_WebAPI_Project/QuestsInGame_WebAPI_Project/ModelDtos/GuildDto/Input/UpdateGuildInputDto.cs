@@ -3,7 +3,7 @@
     public class UpdateGuildInputDto
     {
         public string? NewGuildName { get; set; }
-        public string? NewDescription { get; set; }
+        public string? NewGuildDescription { get; set; }
         public List<string>? NewMembersId { get; set; }
     }
 }

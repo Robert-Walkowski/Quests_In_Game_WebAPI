@@ -1,6 +1,8 @@
 using Microsoft.OpenApi;
+using QuestsInGame_WebAPI_Project.Database;
 using QuestsInGame_WebAPI_Project.Interfaces;
 using QuestsInGame_WebAPI_Project.Services;
+using Raven.Client.Documents.Indexes;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,8 +22,9 @@ builder.Services.AddScoped<IGuildsService, GuildsService>();
 builder.Services.AddScoped<IQuestService, QuestService>();
 builder.Services.AddScoped<IQuestCompletionService, QuestCompletionService>();
 
-
 var app = builder.Build();
+
+IndexCreation.CreateIndexes(typeof(Program).Assembly, DocumentStoreHolder.Store);
 
 if (app.Environment.IsDevelopment())
 {

@@ -58,6 +58,66 @@
         }
       }
     },
+    "/api/Character/autoIndexCharactersWithLevel10OrMoreAndWarriorClass": {
+      "get": {
+        "tags": [
+          "Character"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Character/autoIndexCharactersWithGuildOnly": {
+      "get": {
+        "tags": [
+          "Character"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Character/staticIndexCharactersWithGuildName": {
+      "get": {
+        "tags": [
+          "Character"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Character/staticIndexCharacterByExpirienceScoreWithGoldTierAndClassWarrior": {
+      "get": {
+        "tags": [
+          "Character"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Character/skipFourFirstCharactersAndTakeTwo": {
+      "get": {
+        "tags": [
+          "Character"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Character/updateCharacter/{id}": {
       "put": {
         "tags": [
@@ -290,6 +350,48 @@
         }
       }
     },
+    "/api/Quest/FTSQuestByTitleOrDescription": {
+      "get": {
+        "tags": [
+          "Quest"
+        ],
+        "parameters": [
+          {
+            "name": "searchingTerm",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Quest/VectorSearchQuests": {
+      "get": {
+        "tags": [
+          "Quest"
+        ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Quest/updateQuest/{id}": {
       "put": {
         "tags": [
@@ -324,6 +426,36 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Quest/patchByQueryNewLevelQuests": {
+      "put": {
+        "tags": [
+          "Quest"
+        ],
+        "parameters": [
+          {
+            "name": "qLevel",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "NewLevel",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -398,6 +530,18 @@
               "type": "string"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/QuestCompletion/IWMRCharactersWithCountOfCompletedQuests": {
+      "get": {
+        "tags": [
+          "QuestCompletion"
         ],
         "responses": {
           "200": {
@@ -485,8 +629,7 @@
           },
           "level": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "characterGuildId": {
             "type": "string",
@@ -498,11 +641,11 @@
       "CreateGuildInputDto": {
         "type": "object",
         "properties": {
-          "name": {
+          "guildName": {
             "type": "string",
             "nullable": true
           },
-          "description": {
+          "guildDescription": {
             "type": "string",
             "nullable": true
           },
@@ -543,11 +686,11 @@
       "CreateQuestInputDto": {
         "type": "object",
         "properties": {
-          "title": {
+          "questTitle": {
             "type": "string",
             "nullable": true
           },
-          "description": {
+          "questDescription": {
             "type": "string",
             "nullable": true
           },
@@ -599,8 +742,7 @@
           },
           "newLevel": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "newCharacterGuildId": {
             "type": "string",
@@ -616,7 +758,7 @@
             "type": "string",
             "nullable": true
           },
-          "newDescription": {
+          "newGuildDescription": {
             "type": "string",
             "nullable": true
           },
@@ -653,7 +795,7 @@
             "type": "string",
             "nullable": true
           },
-          "newDescription": {
+          "newQuestDescription": {
             "type": "string",
             "nullable": true
           },

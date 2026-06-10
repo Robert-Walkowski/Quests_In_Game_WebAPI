@@ -18,13 +18,13 @@ namespace QuestsInGame_WebAPI_Project.Services
             {
                 using (var session = DocumentStoreHolder.Store.OpenAsyncSession())
                 {
-                    if (request.Name is null)
+                    if (request.GuildName is null)
                         return GuildStatus.EMPTY_GUILD_NAME;
 
                     GuildModel guild = new GuildModel
                     {
-                        Name = request.Name,
-                        Description = request.Description,
+                        GuildName = request.GuildName,
+                        GuildDescription = request.GuildDescription,
                         MembersId = request.MembersId
                     };
 
@@ -92,21 +92,26 @@ namespace QuestsInGame_WebAPI_Project.Services
                     if (guildToUpdate is null)
                         return (null, GuildStatus.GUILD_NOT_FOUND);
                     if (request.NewGuildName is not null)
-                        guildToUpdate.Name = request.NewGuildName;
-                    if (request.NewDescription is not null)
-                        guildToUpdate.Description = request.NewDescription;
-                    if (request.NewMembersId is not null)
+                        guildToUpdate.GuildName = request.NewGuildName;
+                    if (request.NewGuildDescription is not null)
+                        guildToUpdate.GuildDescription = request.NewGuildDescription;
+                    if (guildToUpdate.MembersId is null && request.NewMembersId is not null)
+                    {
+                        guildToUpdate.MembersId = new List<string>();
+
+                        foreach (string memberId in request.NewMembersId)
+                        {
+                            CharacterModel character = await session.LoadAsync<CharacterModel>(memberId);
+                            character.CharacterGuildId = guildToUpdate.Id;
+                            guildToUpdate.MembersId.Add(character.Id);
+                        }
+                    }
+                    else if (guildToUpdate.MembersId is not null && request.NewMembersId is not null)
                     {
                         foreach (string memberId in request.NewMembersId)
                         {
                             CharacterModel character = await session.LoadAsync<CharacterModel>(memberId);
                             character.CharacterGuildId = guildToUpdate.Id;
-                        }
-                    }
-                    if (guildToUpdate.MembersId is not null && request.NewMembersId is not null)
-                    {
-                        foreach (string memberId in request.NewMembersId)
-                        {
                             guildToUpdate.MembersId.Add(memberId);
                         }
                     }

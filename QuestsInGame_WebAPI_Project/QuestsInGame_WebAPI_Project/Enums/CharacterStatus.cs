@@ -9,6 +9,7 @@
         CHARACTER_NOT_FOUND = 4,
         INCORRECT_GAMECLASS = 5,
         GUILD_NOT_EXISTS = 6,
+        AUTO_INDEX_FAIL = 7,
         RAVEN_ERROR = 99
     }
 
@@ -32,6 +33,8 @@
                     return "Podano nazwę klasy, która nie jest dostępna w tej grze.";
                 case CharacterStatus.GUILD_NOT_EXISTS:
                     return "Podany id gildii jest niepoprawny (nie istnieje gildia o takim id).";
+                case CharacterStatus.AUTO_INDEX_FAIL:
+                    return "Przy autoindeksie wystąpił błąd (najpewniej przez to, że nie ma takich rekordów w bazie).";
                 case CharacterStatus.RAVEN_ERROR:
                     return "Wystąpił problem związany z ravenem.";
                 default:
